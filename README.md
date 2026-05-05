@@ -1,12 +1,12 @@
 # Handwritten Digit Classification: FNN vs. CNN on MNIST
 
-> Comparing Fully Connected and Convolutional Neural Networks for image classification — with noise robustness testing.
+> Comparing Fully Connected and Convolutional Neural Networks for image classification - with noise robustness testing.
 
 ---
 
 ## Overview
 
-This project implements and compares two deep learning architectures — a **Fully Connected Neural Network (FNN)** and a **Convolutional Neural Network (CNN)** — for classifying handwritten digits using the MNIST dataset. Beyond standard evaluation, the models are stress-tested against **impulsive (salt-and-pepper) noise** to analyze real-world robustness.
+This project implements and compares two deep learning architectures - a **Fully Connected Neural Network (FNN)** and a **Convolutional Neural Network (CNN)** - for classifying handwritten digits using the MNIST dataset. Beyond standard evaluation, the models are stress-tested against **impulsive (salt-and-pepper) noise** to analyze real-world robustness.
 
 ---
 
@@ -16,8 +16,8 @@ This project implements and compares two deep learning architectures — a **Ful
 |-------|------------------------|------------------------|---------------|
 | FNN   | 95.15%                 | 90.30%                 | **4.85%**     |
 | CNN   | 98.90%                 | 88.85%                 | **10.05%**    |
-| FNN (Full Test Set) | 96.27% | — | — |
-| CNN (Full Test Set) | **99.21%** | — | — |
+| FNN (Full Test Set) | 96.27% | - | - |
+| CNN (Full Test Set) | **99.21%** | - | - |
 
 **Key insight:** The CNN achieves higher baseline accuracy by preserving spatial structure, but the FNN proves more resilient to pixel-level noise distortions.
 
@@ -131,7 +131,7 @@ jupyter notebook CNN.ipynb
 
 ## Conclusion
 
-The CNN outperforms the FNN on clean data due to its ability to extract local spatial features like edges and curves through convolutional layers. However, because the FNN processes images as flat vectors rather than structured feature maps, it shows greater resilience to pixel-level noise — dropping only 4.85% in accuracy versus the CNN's 10.05% drop under identical noise conditions.
+The CNN outperforms the FNN on clean data due to its ability to extract local spatial features like edges and curves through convolutional layers. However, because the FNN processes images as flat vectors rather than structured feature maps, it shows greater resilience to pixel-level noise - dropping only 4.85% in accuracy versus the CNN's 10.05% drop under identical noise conditions.
 
 This tradeoff highlights an important principle: **architectural strengths in one domain can become vulnerabilities in another.**
 
